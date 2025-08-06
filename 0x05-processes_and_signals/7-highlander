@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
-# Loop forever printing “To infinity and beyond” and trap SIGTERM to loudly declare invincibility
-trap 'printf "I am invincible!!!\n" >&2' SIGTERM
+# Trap SIGTERM to declare invincibility
+trap 'echo "I am invincible!!!"' SIGTERM
 
+# Wait silently forever
 while true; do
-  echo "To infinity and beyond"
-  sleep 2
+  sleep 1
 done
+
